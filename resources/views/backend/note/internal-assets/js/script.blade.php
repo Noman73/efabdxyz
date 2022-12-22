@@ -93,7 +93,7 @@ window.formRequest= function(){
 $(document).on("click","#modalBtn",  function(event){
     console.log('fire')
     Clear();
-    $('#exampleModalLabel').text('Add New Customer');
+    $('#exampleModalLabel').text('Add New Note');
     $('.password').removeClass('d-none')
 });
 
@@ -109,7 +109,7 @@ $(document).on("click","#modalBtn",  function(event){
 $(document).delegate(".editRow", "click", function(){
     Clear()
     $('.password').addClass('d-none')
-    $('#exampleModalLabel').text('Edit Customer');
+    $('#exampleModalLabel').text('Edit Note');
     let route=$(this).data('url');
     axios.get(route)
     .then((data)=>{
